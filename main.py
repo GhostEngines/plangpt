@@ -14,6 +14,10 @@ app.add_middleware(
     allow_headers=["*"],
 ) 
 
-@app.get('/{date}/{task}', include_in_schema = False)
-def home(date, task):
+@app.get('/', include_in_schema= False)
+def home():
+    return {'status': 'Working'}
+
+@app.get('/{date}/{task}')
+def function(date, task):
     return todochat(plan=task, complete_before=date)
