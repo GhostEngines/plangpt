@@ -6,3 +6,5 @@ __pycache__
 .terraform.lock.hcl
 terraform.tfstate
 serverless
+client.crx
+client.pem
