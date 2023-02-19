@@ -1,3 +1,5 @@
+// INIT
+
 terraform {
   required_providers {
     digitalocean = {
@@ -10,6 +12,8 @@ terraform {
     }
   }
 }
+
+// SET VARIABLES
 
 variable "do_api_token" {
   type        = string
@@ -26,7 +30,9 @@ variable "gh_access_token" {
   description = "GitHub Personal Access Token"
 }
 
-# Configure the GitHub Provider
+
+// CONFIGURE PROVIDERS
+
 provider "github" {
     token = var.gh_access_token
 }
@@ -35,6 +41,8 @@ provider "digitalocean" {
   token = var.do_api_token
 }
 
+
+// RESOURCES
 
 resource "digitalocean_app" "plan_gpt" {
   spec {
