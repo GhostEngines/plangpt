@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "PlanGPT",
+    "version": "1.0",
+    "description": "Chrome extension for executing any Plan with ease powered by GPT3",
+    "icons": {
+        "48": "icons/icons48.png",
+        "128": "icons/icons128.png"
+    },
+    "browser_action": {
+        "default_title": "PlanGPT",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "author": "Ghostengines Technologies"
+}
