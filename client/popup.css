@@ -8,6 +8,64 @@ body {
   align-items: center;
 }
 
+/* Heading */
+h1 {
+  color: #ff1493;
+  font-size: 48px;
+  font-family: 'Arial Black', sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+/* Style the form container */
+#plan-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the form labels */
+#plan-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Style the form inputs */
+#plan-form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+
+/* Style the submit button */
+#submit-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Change the button color on hover */
+#submit-button:hover {
+  background-color: #3e8e41;
+}
+
+
 /* Style the table */
 #task-table {
   margin: 20px auto;
