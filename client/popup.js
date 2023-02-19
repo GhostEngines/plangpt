@@ -1,7 +1,7 @@
 // popup.js
 
-// const host = 'http://127.0.0.1:8000'
-const host = 'http://127.0.0.1:8000'
+// const host = 'http://127.0.0.1:8000/generate?'
+const host = 'http://plangpt.ghostengines.io/generate?'
 
 // Define the form elements and their values
 const taskInput = document.getElementById('plan');
@@ -33,7 +33,7 @@ submitButton.addEventListener('click', async (event) => {
   copyButton.innerText = 'Loading...';
 
   // Send the data to the server and get the response
-  fetch(`${host}/generate?plan=${task}&complete_before=${date}`, {
+  fetch(`${host}plan=${task}&complete_before=${date}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
