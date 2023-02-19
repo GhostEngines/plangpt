@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import Response
 from langchain import OpenAI
-from llm import get_current_datetime
 from os import environ, getenv
 
 app = FastAPI()
@@ -14,6 +13,17 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+# GET CURRENT DATETIME
+
+def get_current_datetime():
+    from datetime import datetime
+    import time
+    current_timestamp = datetime.now()
+    current_timestamp = int(time.mktime(current_timestamp.timetuple()))
+    return current_timestamp
+
 
 if 'OPENAI_API_KEY' in environ:
     openai_api_key = environ['OPENAI_API_KEY']
