@@ -1,4 +1,4 @@
-from flask import Flask, request, Response
+from flask import Flask, request, Response, jsonify
 from langchain import OpenAI
 from os import environ, getenv
 import json
@@ -37,5 +37,6 @@ def generate_tasks():
     prompt = '''Please generate a JSON of subtasks and their deadlines for the task %s. The subtasks should be reasonable and not take more than a day to complete. I want to complete all the subtasks in %s days. Current Timestamp: %s
     The JSON output should be in the following format: [{"name": Subtask 1, "description": Description of subtask 1, "deadline": deadline for subtask 2 in unix timestamp, "resources" : [resources needed to accomplish subtask 1], "risks": [risks associated with subtask 1 includes potential roadblocks, obstacles, and challenges that may arise], "reference": reference links that are useful for subtask 1}, {"name": Subtask 2, "description": Description of subtask 2, , "deadline": deadline for subtask 2 in unix timestamp, "resources": [resources needed to accomplish subtask 2], "risks": [risks associated with subtask 2 includes potential roadblocks, obstacles, and challenges that may arise, "reference": reference links that are useful for subtask 2]}].'''%(plan, complete_before, get_current_datetime())
     response = llm(prompt)
+    print(response)
     headers = {'Content-Type': 'application/json'}
-    return Response(json.dumps(response), headers=headers)
+    return jsonify(response)

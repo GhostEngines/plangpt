@@ -1,7 +1,7 @@
 // popup.js
 
 // const host = 'http://127.0.0.1:8000/generate?'
-const host = 'http://plangpt.ghostengines.io/generate?'
+const host = 'https://plangpt-ouvej.ondigitalocean.app/generate'
 
 // Define the form elements and their values
 const taskInput = document.getElementById('plan');
@@ -32,14 +32,17 @@ submitButton.addEventListener('click', async (event) => {
   table.classList.add("loader");
   copyButton.innerText = 'Loading...';
 
-  // Send the data to the server and get the response
-  fetch(`${host}plan=${task}&complete_before=${date}`, {
+  var formdata = new FormData();
+  formdata.append("complete_before", date);
+  formdata.append("plan", task);
+
+  var requestOptions = {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({})
-  })
+    body: formdata
+  };
+
+  // Send the data to the server and get the response
+  fetch(host, requestOptions)
   .then((response) => {
     // Log the response for debugging
     console.log(response);
