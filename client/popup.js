@@ -1,7 +1,7 @@
 // popup.js
 
 // const host = 'http://127.0.0.1:8000'
-const host = 'https://127.0.0.1:8000'
+const host = 'http://127.0.0.1:8000'
 
 // Define the form elements and their values
 const taskInput = document.getElementById('plan');
