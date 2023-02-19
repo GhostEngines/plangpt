@@ -6,10 +6,10 @@ terraform {
       source = "digitalocean/digitalocean"
       version = "~> 2.0"
     }
-    github = {
-      source  = "integrations/github"
-      version = "~> 5.0"
-    }
+    # github = {
+    #   source  = "integrations/github"
+    #   version = "~> 5.0"
+    # }
   }
 }
 
@@ -25,17 +25,17 @@ variable "OPENAI_API_KEY" {
   description = "OpenAI API key"
 }
 
-variable "gh_access_token" {
-  type        = string
-  description = "GitHub Personal Access Token"
-}
+# variable "gh_access_token" {
+#   type        = string
+#   description = "GitHub Personal Access Token"
+# }
 
 
 // CONFIGURE PROVIDERS
 
-provider "github" {
-    token = var.gh_access_token
-}
+# provider "github" {
+#     token = var.gh_access_token
+# }
 
 provider "digitalocean" {
   token = var.do_api_token
