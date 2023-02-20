@@ -1,7 +1,6 @@
 // popup.js
 
-// const host = 'http://127.0.0.1:8000/generate?'
-const host = 'https://plangpt-ouvej.ondigitalocean.app/generate'
+const host = 'http://127.0.0.1:8000/generate'
 
 // Define the form elements and their values
 const taskInput = document.getElementById('plan');
