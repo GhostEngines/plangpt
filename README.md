@@ -4,6 +4,9 @@ PlanGPT is an AI-based application that lets you execute any plan step-by-step. 
 
 With PlanGPT, you can simply answer "What do you want to accomplish?" and "When is the deadline for it?", and the app will generate a task name, description, deadline, risks, and reference links for you to follow.
 
+
+![Alt Text](https://github.com/GhostEngines/plangpt/assets/demo.gif)
+
 ## Features
 - :rocket: Easy to use: Simply answer two questions to get started
 - :computer: GPT-3 powered: Use the power of GPT-3 to generate a customized plan
