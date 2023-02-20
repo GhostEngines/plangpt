@@ -32,23 +32,33 @@ To run the Flask app, follow these steps:
 
 1. Navigate to the server directory:
 
-`cd server`
+```
+cd server
+```
 
 2. Create a new virtual environment and activate it:
 
-`python3 -m virtualenv venv`
+```
+python3 -m virtualenv venv
+```
 
-`source venv/bin/activate`
+```
+source venv/bin/activate
+```
 
 3. Install the required packages:
 
-`pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
 
 4. Rename the `env.example` file to `.env` and add your OpenAI API key to the `OPENAI_API_KEY` field
 
 5. Start the server:
 
-`flask run`
+```
+python app.py
+```
 
 ## License
 This project is licensed under the Apache 2.0 License.
